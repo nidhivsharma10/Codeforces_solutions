@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int p,ans;
+    cin>>p;
+    while(p--){
+        cin>> ans;
+        if(ans==1){
+            cout<<"HARD";
+            return 0;
+        }
+    }
+    cout<<"EASY";
+    return 0;
+}
