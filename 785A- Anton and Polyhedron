@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    Scanner sc =new Scanner(System.in);
+    long  n,sum=0;
+    n=sc.nextLong();
+    String str=new String();
+    for(long  i=0;i<n;i++){
+        str=sc.next();
+        switch(str){
+            case "Tetrahedron": sum=sum+4;break;
+            case "Cube": sum=sum+6;break;
+            case "Octahedron": sum=sum+8;break;
+            case "Dodecahedron": sum=sum+12;break;
+            case "Icosahedron": sum=sum+20;break;
+        }
+    }
+    System.out.println(sum);
+	}
+}
