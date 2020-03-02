@@ -1,0 +1,39 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main(){
+    int n,m;
+    cin>>n;
+    string str1="I hate it ";
+    string str2="I love it ";
+    string str3="I hate that ";
+    string str4="I love that ";
+    string finalStr="";
+    if(n==1){
+        cout<<str1<<endl;   
+        return 0;
+    }
+    if(n==2){
+        cout<<str3+str2<<endl;   
+        return 0;
+    }
+    else{
+        if(n%2==0){
+            m=(n-1)/2;
+            while(m--){
+              finalStr+=str3+str4;
+            }
+            finalStr+=str3+str2;
+        }
+        else{
+            m=(n-1)/2;
+            while(m--){
+              finalStr+=str3+str4;
+            }
+            finalStr+=str1;    
+        }
+    }
+    cout<<finalStr<<endl;
+    return 0;
+}
