@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    
+    int n,Acount=0,Dcount=0;
+    char name;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        cin>>name;
+        if(name=='A')
+            Acount++;
+        else
+            Dcount++;
+    }
+    if(Acount>Dcount)
+            cout<<"Anton"<<endl;
+    else if(Dcount>Acount)
+             cout<<"Danik"<<endl;
+    else
+         cout<<"Friendship"<<endl;
+    return 0;
+}
