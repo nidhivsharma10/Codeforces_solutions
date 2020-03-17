@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int red,blue,total,mix=0,same=0,min=0;
+    cin>>red>>blue;
+    total=red+blue;
+    if(red<blue)
+        min=red;
+    else
+        min=blue;
+    mix=min;
+    same=(total-(2*mix))/2;
+    cout<<mix<<" "<<same<<endl;
+    return 0;
+}
