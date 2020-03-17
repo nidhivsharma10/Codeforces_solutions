@@ -1,0 +1,22 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main(){
+    double n,m;
+    double total=0.0,ans=0;
+    vector<double> drink;
+    cin>>n;
+    for(int i=0;i<n;i++){
+       cin>>m;
+       drink.push_back(m);
+    }
+    for(int i=0;i<n;i++){
+        if(drink.at(i)!= 0){
+           total = total+drink.at(i)/100;
+        }
+    }
+    ans= total/n;
+    cout<<(ans*100)<<endl;
+    return 0;
+}
