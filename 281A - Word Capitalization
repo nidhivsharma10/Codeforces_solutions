@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    string str;
+    cin>>str;
+    int first=str[0];
+    if(first<=122 && first>=97){
+        first=first-32;
+        str[0]=first;
+    }
+    cout<<str;
+    return 0;
+}
