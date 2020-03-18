@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int count=0;
+    string str;
+    cin>>str;
+    bool appear[125]={false};
+    for(int i=0;i<str.length();i++){
+        appear[str[i]]=true;
+    }
+    for(int i=0;i<125;i++){
+        if(appear[i]==true)
+            count++;
+    }
+    if(count%2==0)
+        cout<<"CHAT WITH HER!"<<endl;
+    else
+        cout<<"IGNORE HIM!"<<endl;
+    return 0;
+}
