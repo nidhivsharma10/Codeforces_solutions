@@ -1,0 +1,23 @@
+#include<iostream>
+#include <bits/stdc++.h> 
+using namespace std;
+
+int main(){
+    long long t,n,m,x=0,y=0,tree;
+    cin>>t;
+    m=t;
+    vector<long long> len;
+    while(t--){
+        cin>>n;
+        len.push_back(n);
+    }
+    if(m>1)
+        sort(len.begin(), len.end()); 
+    for(int i=0;i<m/2;i++)
+        x+=len.at(i);
+    for(int i=m/2;i<m;i++)
+        y+=len.at(i);
+    tree=x*x+y*y;
+    cout<<tree<<endl;
+    return 0;
+}
