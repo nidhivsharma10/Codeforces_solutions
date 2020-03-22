@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int qnum,time1;
+    char s;string q;
+    cin>>qnum>>time1;
+    while(qnum--){
+        cin>>s;
+        q+=s;
+    }
+    while(time1--){
+        for(int i=0;i<q.length();){
+            if(q[i]=='B' && q[i+1]=='G'){
+                swap(q[i],q[i+1]);
+                i=i+2;
+            }
+            else
+                i=i+1;
+        }
+    }
+    cout<<q<<endl;
+    return 0;
+}
