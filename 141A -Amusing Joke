@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    string str1,str2,str,strSum="";
+    int sum1=0,sum2=0,sum=0;
+    cin>>str1>>str2>>str;
+    strSum=str1+str2;
+    sort(strSum.begin(),strSum.end());
+    sort(str.begin(),str.end());
+    if(strSum.length()==str.length()){
+        for(int i=0;i<strSum.length();i++){
+            if(strSum[i]==str[i]){}
+            else{
+                cout<<"NO"<<endl; 
+                return 0;
+            }
+        }
+    }
+    else{
+        cout<<"NO"<<endl; 
+        return 0;
+    }
+    cout<<"YES"<<endl;
+    return 0;
+}
