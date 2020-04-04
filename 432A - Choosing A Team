@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+   int n,k;
+   cin>>n>>k;
+   vector<int> vect;
+   for(int i=0;i<n;i++){
+       int num;
+       cin>>num;
+       vect.push_back(num);
+   }
+   int tc=0,mm=0;
+   for(int i=0;i<n;i++){
+       if((vect.at(i)+k)<=5  && mm!=3){
+           mm++;
+       }
+       if(mm==3){
+           tc++;
+           mm=0;
+       }
+   }
+   cout<<tc;
+
+    return 0;
+}
