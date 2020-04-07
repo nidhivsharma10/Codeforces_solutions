@@ -1,0 +1,35 @@
+
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n,s=0,d=0;
+    vector<int> vec;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        int a;
+        cin>>a;
+        vec.push_back(a);
+    }
+    for(int i=0;i<n;i++){
+        vector<int>:: iterator idx;
+        int len=vec.size();
+        int ele;
+        ele=max(vec.at(0),vec.at(len-1));
+        idx=find(vec.begin(),vec.end(),ele);
+        if(i%2==0){
+            s+=ele;
+            vec.erase(idx);
+        
+        }
+        else{
+            d+=ele;
+            vec.erase(idx);
+        }
+    }
+    cout<<s<<" "<<d;
+    return 0;
+}
